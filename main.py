@@ -7,7 +7,7 @@ def int_to_hex_string(value, bits):
 def create(args) :
 	hex_3_digits = '{:0>3X}'
 	hex_2_digits = '{:0>2X}'
-	message = hex_3_digits.format(args.node_id + (0x600 if args.sdo == 'transmit' else 0x580)) # node-id int to string hex with zeros to the left
+	message = hex_3_digits.format(args.node_id + (0x580 if args.sdo == 'transmit' else 0x600)) # node-id int to string hex with zeros to the left
 	message += '#'
 
 	command_byte = 0
